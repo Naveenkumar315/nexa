@@ -32,6 +32,7 @@ class Settings(BaseSettings):
     frame_size: int = 1280
     ring_buffer_seconds: float = 10.0
     wake_word_threshold: float = Field(default=0.5, ge=0.0, le=1.0)
+    input_device_index: int | None = 8
 
     # Paths
     allowed_file_roots: list[Path] = Field(default_factory=list)
